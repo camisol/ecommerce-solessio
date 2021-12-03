@@ -1,5 +1,7 @@
 import NavItems from './NavItems';
+import CartWidget from './CartWidget';
 import './NavBar.css';
+
 
 function NavBar() {
     return (
@@ -11,6 +13,7 @@ function NavBar() {
                 <div className="navItemsContainer">
                     <NavItems />
                 </div>
+                <CartWidget />
             </div>
         </header>
     );
