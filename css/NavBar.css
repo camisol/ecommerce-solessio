@@ -1,0 +1,10 @@
+header { background-color: black; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; height: 15vh; }
+
+header .navBar { display: -webkit-box; display: -ms-flexbox; display: flex; width: 90%; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
+
+header .navBar a { text-decoration: none; }
+
+header .navBar .navLogo { color: white; font-size: 2.4em; }
+
+header .navBar .navItemsContainer { width: 50%; margin-right: 12%; }
+/*# sourceMappingURL=NavBar.css.map */

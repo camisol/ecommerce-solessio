@@ -1,3 +1,5 @@
+import './scss/NavItems.scss';
+
 function NavItems() {
     return (
         <ul>

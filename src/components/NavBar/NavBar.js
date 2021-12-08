@@ -1,6 +1,6 @@
 import NavItems from './NavItems';
 import CartWidget from './CartWidget';
-import './NavBar.css';
+import './scss/NavBar.scss';
 
 
 function NavBar() {

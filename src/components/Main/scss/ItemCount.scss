@@ -1,0 +1,38 @@
+.contadorContainer{
+    background-color: rgb(227, 227, 227);
+    margin-top: 30px;
+    margin-left: 30px;
+    padding: 10px;
+    width: 15%;
+    
+    p{
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .contadorControls{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        button{
+            width: 25px;
+            height:25px;
+            border: none;
+            font-size: 1.2em;
+            background-color: white;
+            &:hover{
+                border: 1px solid black;
+            }
+        }
+    }
+    .contadorBtnAdd{
+        width: 100%;
+        border:none;
+        background-color: black;
+        color:white;
+        height:25px;
+        &:hover{
+            background-color: orange;
+        }
+
+    }
+}
