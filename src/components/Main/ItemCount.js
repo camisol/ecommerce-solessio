@@ -3,10 +3,10 @@ import './scss/ItemCount.scss';
 
 
 
-function ItemCount(props) {
+function ItemCount({ stock, stockInicial, onAdd }) {
 
-    const [contador, setContador] = useState(props.stockInicial);
-    const [stock, setStock] = useState(5);
+    const [contador, setContador] = useState(stockInicial);
+    //const [stock, setStock] = useState(5);
 
     const sumar = () => {
         if (contador < stock) {
@@ -15,21 +15,21 @@ function ItemCount(props) {
     }
 
     const restar = () => {
-        if (contador > props.stockInicial) {
+        if (contador > stockInicial) {
             setContador(contador - 1);
         }
     }
 
-    const onAdd = () => {
-        setStock(stock - contador);
-        if (stock > 0) {
-            console.log("Agregaste " + contador + " productos al carrito");
-            setContador(props.stockInicial);
-        } else {
-            setContador(0);
-            console.log("No hay stock de este producto")
-        }
-    }
+    // const onAdd = () => {
+    //     setStock(stock - contador);
+    //     if (stock > 0) {
+    //         console.log("Agregaste " + contador + " productos al carrito");
+    //         setContador(stockInicial);
+    //     } else {
+    //         setContador(0);
+    //         console.log("No hay stock de este producto")
+    //     }
+    // }
 
     return (
 
@@ -40,7 +40,7 @@ function ItemCount(props) {
                 <p>{contador}</p>
                 <button onClick={restar}>-</button>
             </div>
-            <button onClick={onAdd} className="contadorBtnAdd" >Agregar </button>
+            <button onClick={() => onAdd(contador)} className="contadorBtnAdd" >Agregar </button>
         </div>
     )
 }

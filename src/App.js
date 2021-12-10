@@ -8,6 +8,7 @@ import ItemListContainer from './components/Main/ItemListContainer';
 
 function App() {
 
+
   return (
     <>
       <NavBar />

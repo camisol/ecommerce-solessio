@@ -2,13 +2,20 @@
 import ItemCount from './ItemCount';
 
 
-function ItemListContainer(props) {
+
+function ItemListContainer({ greeting }) {
+
+
+    const onAdd = (contador) => {
+
+        console.log("Agregaste " + contador + " productos al carrito");
+    }
 
 
     return (
         <main>
-            <p>¡{props.greeting}!</p>
-            <ItemCount /*stock={5}*/ stockInicial={1} />
+            <p>¡{greeting}!</p>
+            <ItemCount stock={5} stockInicial={1} onAdd={onAdd} />
         </main>
     )
 }
