@@ -1,7 +1,8 @@
 
-import './components/NavBar/NavBar';
+
 import NavBar from './components/NavBar/NavBar';
 import ItemListContainer from './components/Main/ItemListContainer';
+import ItemDetailContainer from './components/Main/ItemDetailContainer';
 
 
 
@@ -13,6 +14,7 @@ function App() {
     <>
       <NavBar />
       <ItemListContainer greeting="Bienvenidos" />
+      <ItemDetailContainer />
     </>
   );
 }

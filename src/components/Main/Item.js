@@ -8,6 +8,7 @@ function Item({ item }) {
             <p>{item.nombre}</p>
             <p>ID:{item.id}</p>
             <p>${item.precio}</p>
+            <button>Ver detalle</button>
         </div>
     )
 }

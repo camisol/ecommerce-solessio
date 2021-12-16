@@ -1,5 +1,5 @@
 
-import ItemCount from './ItemCount';
+
 import ItemList from './ItemList';
 import { useState } from 'react';
 import { useEffect } from 'react';
@@ -25,7 +25,12 @@ function ItemListContainer({ greeting }) {
         promesa
             .then((elementos) => {
                 console.log(elementos)
-                setProductos([...elementos])
+                setProductos(elementos)
+            })
+
+            .catch(() => {
+                console.log("Error")
+
             })
 
 
@@ -33,18 +38,10 @@ function ItemListContainer({ greeting }) {
 
     }, [productosIniciales])
 
-    //console.log(productos2)
-
-
-    const onAdd = (contador) => {
-        console.log("Agregaste " + contador + " productos al carrito");
-    }
-
 
     return (
         <main>
             <p>¡{greeting}!</p>
-            <ItemCount stock={5} stockInicial={1} onAdd={onAdd} />
             <ItemList items={productos} />
         </main>
     )
