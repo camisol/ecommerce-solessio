@@ -1,17 +1,29 @@
 import NavItems from './NavItems';
 import CartWidget from './CartWidget';
 import './scss/NavBar.scss';
+import { NavLink } from "react-router-dom";
 
 
-function NavBar() {
+
+function NavBar({ nombre }) {
+
+    const links = [
+        { href: "/todos", name: "Todos", id: 1 },
+        { href: "/categorias/deporte", name: "Deporte", tipo: "deporte", id: 2 },
+        { href: "/categorias/urbano", name: "Urbano", tipo: "urbano", id: 3 },
+
+    ]
+
     return (
         <header>
             <div className="navBar">
                 <div className="navLogoContainer">
-                    <a className="navLogo" href="index.html" alt="logo">THE FIT SHOP </a>
+                    <NavLink to="/">
+                        <a className="navLogo" href="index.html" alt="logo">{nombre}</a>
+                    </NavLink>
                 </div>
                 <div className="navItemsContainer">
-                    <NavItems />
+                    <NavItems links={links} />
                 </div>
                 <CartWidget />
             </div>

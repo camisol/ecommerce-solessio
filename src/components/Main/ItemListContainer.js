@@ -3,15 +3,18 @@
 import ItemList from './ItemList';
 import { useState } from 'react';
 import { useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 
 
-const productosIniciales = [{ nombre: `Zapatillas Raven`, id: 1, precio: 12000 }, { nombre: `Zapatillas Space`, id: 2, precio: 10500 }, { nombre: `Zapatillas Black`, id: 3, precio: 13900 }]
+const productosIniciales = [{ nombre: `Zapatillas Raven`, id: 1, precio: 12000, tipo: "deporte" }, { nombre: `Zapatillas Space`, id: 2, precio: 10500, tipo: "urbano" }, { nombre: `Zapatillas Black`, id: 3, precio: 13900, tipo: "urbano" }]
 
 
 function ItemListContainer({ greeting }) {
 
     let [productos, setProductos] = useState([]);
 
+    const { tipo } = useParams()
+    console.log(tipo)
 
     useEffect(() => {
 
@@ -24,7 +27,6 @@ function ItemListContainer({ greeting }) {
 
         promesa
             .then((elementos) => {
-                console.log(elementos)
                 setProductos(elementos)
             })
 
@@ -33,10 +35,7 @@ function ItemListContainer({ greeting }) {
 
             })
 
-
-
-
-    }, [productosIniciales])
+    }, [])
 
 
     return (

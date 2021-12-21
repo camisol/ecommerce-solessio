@@ -1,13 +1,14 @@
 import './scss/NavItems.scss';
+import { Link } from "react-router-dom";
 
-function NavItems() {
+function NavItems({ links }) {
     return (
-        <ul>
-            <li><a href='#'>item1</a></li>
-            <li><a href='#'>item2</a></li>
-            <li><a href='#'>item3</a></li>
-            <li><a href='#'>item4</a></li>
-        </ul>
+        <>
+            {links.map((elemento) => {
+                return <Link key={elemento.id} to={elemento.href}>{elemento.name}</Link>
+            })}
+
+        </>
     )
 }
 
