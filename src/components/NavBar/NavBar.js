@@ -8,10 +8,9 @@ import { NavLink } from "react-router-dom";
 function NavBar({ nombre }) {
 
     const links = [
-        { href: "/todos", name: "Todos", id: 1 },
+        { href: "/categorias/todos", name: "Todos", id: 1, tipo: "todos" },
         { href: "/categorias/deporte", name: "Deporte", tipo: "deporte", id: 2 },
         { href: "/categorias/urbano", name: "Urbano", tipo: "urbano", id: 3 },
-
     ]
 
     return (

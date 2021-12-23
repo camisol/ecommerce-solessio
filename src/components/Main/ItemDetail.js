@@ -1,11 +1,17 @@
 import ItemCount from './ItemCount';
 import foto from './imagenes/fotoProducto1.jpg';
+import { useParams } from 'react-router-dom';
 
 function ItemDetail({ producto }) {
 
     const onAdd = (contador) => {
         console.log("Agregaste " + contador + ` ${producto.nombre} ` + "al carrito");
     }
+
+    const { id } = useParams();
+
+
+    console.log(id)
 
 
     return (
