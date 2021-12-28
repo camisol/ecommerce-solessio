@@ -9,7 +9,6 @@ function ItemDetail({ producto }) {
 
     }
 
-
     return (
         <div className="productDetailContainer">
             <p>DETALLE DEL PRODUCTO</p>
