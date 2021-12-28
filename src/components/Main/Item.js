@@ -1,4 +1,4 @@
-
+//import { Link } from 'react-router-dom';
 
 function Item({ item }) {
 
@@ -8,7 +8,11 @@ function Item({ item }) {
             <p>{item.nombre}</p>
             <p>ID:{item.id}</p>
             <p>${item.precio}</p>
-            <button>Ver detalle</button>
+
+            <button>
+                ver detalle
+                {/* <Link to="/item" >Ver detalle</Link> */}
+            </button>
         </div>
     )
 }

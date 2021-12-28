@@ -11,34 +11,35 @@ function ItemDetailContainer() {
 
     let [producto, setProducto] = useState({});
     const { id } = useParams();
+    console.log(id)
 
-    console.log(productos1)
 
 
     useEffect(() => {
 
         const getItem = new Promise((res) => {
 
-            setTimeout(() => {
-                res(productos1)
-            }, 2000);
-        })
+            res(productos1)
 
+        })
 
         getItem
             .then((elementos) => {
+
                 if (elementos.id !== "undefined") {
-                    let detalle = elementos.filter((elementos) => elementos.id === id)
-                    setProducto(detalle)
+                    let idProd = elementos.filter((elementos) => elementos.id === id)
+                    setProducto(idProd)
                 }
             })
 
             .catch(() => {
                 console.log("Error")
-
             })
 
     }, [id])
+
+
+
 
     return (
         <ItemDetail producto={producto} />
